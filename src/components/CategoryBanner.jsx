@@ -6,22 +6,22 @@ import kids from "../assets/images/kids.png";
 
 const shades = [
   {
-    title: "Sarees",
+    title: "Shirts",
     image: men,
     bg: "bg-pink-200",
   },
   {
-    title: "Kurtis",
+    title: "Jeans",
     image: women,
     bg: "bg-yellow-200",
   },
   {
-    title: "Western Wear",
+    title: "T-Shirts",
     image: boys,
     bg: "bg-gray-200",
   },
   {
-    title: "Dresses",
+    title: "Formal Wear",
     image: girls,
     bg: "bg-stone-300",
   },
@@ -34,8 +34,8 @@ const shades = [
 
 function CategoryBanner() {
   return (
-    <section className="py-20">
-
+    <section className="max-w-screen-2xl mx-auto px-6 py-16">
+ 
       <h2 className="text-4xl font-bold text-center">
         Premium Shades
       </h2>
@@ -60,7 +60,7 @@ function CategoryBanner() {
 
             <img
               src={item.image}
-              className="h-40 object-contain"
+              className="h-20 object-contain"
             />
 
           </div>
