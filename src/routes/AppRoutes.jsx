@@ -7,6 +7,8 @@ import History from "../pages/History";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 
+import About from "../pages/About";
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -17,6 +19,8 @@ function AppRoutes() {
         <Route path="/history" element={<History />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
+        <Route path="/about-us" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

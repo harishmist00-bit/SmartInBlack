@@ -50,15 +50,16 @@ const Footer = () => {
           <div>
 
             <h3 className="font-semibold text-xl text-slate-900 mb-6">
-              Product
+              Quick Links
             </h3>
 
             <ul className="space-y-4 text-gray-500">
 
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">API</a></li>
-              <li><a href="#">Browser Extension</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Return & Refund Policy</a></li>
 
             </ul>
 
@@ -69,16 +70,15 @@ const Footer = () => {
           <div>
 
             <h3 className="font-semibold text-xl text-slate-900 mb-6">
-              Resources
+              Categories
             </h3>
 
             <ul className="space-y-4 text-gray-500">
-
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">SEO Guide</a></li>
-              <li><a href="#">Support</a></li>
-
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Footwear</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Bags</a></li>
+              <li><a href="#">Sportswear</a></li>
             </ul>
 
           </div>

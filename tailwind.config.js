@@ -4,12 +4,14 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+
   theme: {
     extend: {
       fontFamily: {
-        outfit: ['Outfit', 'sans-serif'],
+        jost: ["Jost", "sans-serif"],
       },
     },
   },
+
   plugins: [],
-}
+};
