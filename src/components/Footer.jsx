@@ -6,12 +6,32 @@ import {
 } from "react-icons/fa6";
 
 import { FaChartBar } from "react-icons/fa";
+import Upi from "../assets/upi.png";
+import Visa from "../assets/visa.png";
+import Mastercard from "../assets/mastercard.png";
+import { ChevronsRight } from "lucide-react";
+
+const categories = [
+  "Clothing",
+  "Footwear",
+  "Accessories",
+  "Bags",
+  "Sportswear",
+];
+
+const links = [
+  "About Us",
+  "Privacy Policy",
+  "Terms & Conditions",
+  "Shipping Policy",
+  "Return & Refund Policy",
+];
 
 const Footer = () => {
   return (
     <footer className="border-t border-gray-200 bg-white">
 
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-6">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
@@ -48,94 +68,121 @@ const Footer = () => {
           {/* Product */}
 
           <div>
-
-            <h3 className="font-semibold text-xl text-slate-900 mb-6">
+            <h3 className="mb-6 text-xl font-semibold text-slate-900">
               Quick Links
             </h3>
 
             <ul className="space-y-4 text-gray-500">
-
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-              <li><a href="#">Shipping Policy</a></li>
-              <li><a href="#">Return & Refund Policy</a></li>
-
+              {links.map((link) => (
+                <li key={link}>
+                  <a
+                    href="#"
+                    className="group flex items-center gap-2 transition-colors duration-200 hover:text-slate-900"
+                  >
+                    <ChevronsRight
+                      size={16}
+                      strokeWidth={1.8}
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
-
           </div>
 
           {/* Resources */}
 
           <div>
-
-            <h3 className="font-semibold text-xl text-slate-900 mb-6">
+            <h3 className="mb-6 text-xl font-semibold text-slate-900">
               Categories
             </h3>
 
             <ul className="space-y-4 text-gray-500">
-              <li><a href="#">Clothing</a></li>
-              <li><a href="#">Footwear</a></li>
-              <li><a href="#">Accessories</a></li>
-              <li><a href="#">Bags</a></li>
-              <li><a href="#">Sportswear</a></li>
+              {categories.map((category) => (
+                <li key={category}>
+                  <a
+                    href="#"
+                    className="group flex items-center gap-2 transition-colors duration-200 hover:text-slate-900"
+                  >
+                    <ChevronsRight
+                      size={16}
+                      strokeWidth={1.8}
+                      className="transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                    {category}
+                  </a>
+                </li>
+              ))}
             </ul>
-
           </div>
 
           {/* Company + Legal */}
 
           <div className="space-y-10">
-
             <div>
-
-              <h3 className="font-semibold text-xl text-slate-900 mb-6">
-                Company
+              <h3 className="mb-6 text-xl font-semibold text-slate-900">
+                Contact
               </h3>
 
               <ul className="space-y-4 text-gray-500">
+                <li>
+                  <a href="tel:+919342077629">+91 93420 77629</a>
+                </li>
 
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Press</a></li>
+                <li>
+                  <a href="https://wa.me/919342077629" target="_blank" rel="noreferrer">
+                    +91 93420 77629 - WhatsApp
+                  </a>
+                </li>
 
+                <li>
+                  <a href="mailto:subashharish648@gmail.com">
+                    subashharish648@gmail.com
+                  </a>
+                </li>
               </ul>
 
+              {/* Payment Methods */}
+              <div className="mt-4">
+
+                <div className="flex flex-wrap items-center gap-3">
+                  <img
+                    src={Upi}
+                    alt="UPI"
+                    className="h-12 w-auto object-contain"
+                  />
+
+                  <img
+                    src={Visa}
+                    alt="Visa"
+                    className="h-12 w-auto object-contain"
+                  />
+
+                  <img
+                    src={Mastercard}
+                    alt="Mastercard"
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
+              </div>
             </div>
-
-            <div>
-
-              <h3 className="font-semibold text-xl text-slate-900 mb-6">
-                Legal
-              </h3>
-
-              <ul className="space-y-4 text-gray-500">
-
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-
-              </ul>
-
-            </div>
-
           </div>
 
         </div>
 
         {/* Bottom */}
 
-        <div className="border-t border-gray-200 mt-14 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
 
-          <p className="text-gray-500 text-sm">
-            © 2026 RankPilot. All rights reserved.
+          <p className="text-gray-500 text-base">
+            © 2026 <a href="#" className="font-semibold text-gray-900">SmartInBlack</a>. All rights reserved.
           </p>
 
-          <p className="text-gray-500 text-sm">
-            Status:
+          <p className="text-gray-500 text-base">
+            Developed by:
             <span className="text-green-600 font-medium ml-1">
-              All Systems Operational
+              Harish AP
             </span>
           </p>
 
